@@ -3,7 +3,7 @@
 This is an authentication module that prompts the user a reCAPTCHA challenge. This module is intended to be used after
 another module (ie. LDAP).
 
-This module has been tested on OpenAM 11.0.3 community version but can easiy be adapted for more recent version.
+This module has been tested on OpenAM 11.0.3 community edition but can easiy be adapted for more recent version.
 
 ## Installation
 
@@ -15,7 +15,15 @@ mvn clean package
 
 Copy the *target/openam-recaptcha-module-1.0.0.jar* into the OpenAM *WEB-INF/lib/* folder.
 
+Inside *recaptcha.jsp* file, replace the *data-sitekey* tag value with your own reCAPTCHA secret key.
+
+```
+data-sitekey="RECAPTCHA_SECRET"
+```
+
 Copy the file *recaptcha.jsp* into the OpenAM *config/auth/default/* folder.
+
+Register the module using the following *ssoadm* commands:
 
 ```bash
 ssoadm create-svc -u amadmin -f pwdfile -X src/main/resources/amAuthRecaptchaModule.xml
