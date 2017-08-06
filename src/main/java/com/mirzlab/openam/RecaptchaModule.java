@@ -69,11 +69,10 @@ public class RecaptchaModule extends AMLoginModule {
         String url = "https://www.google.com/recaptcha/api/siteverify";
         try {
             URL obj = new URL(url);
-            HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
             String urlParameters = "secret=" + secret + "&response=" + response;
 
+            HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
             con.setRequestMethod("POST");
-
             con.setDoOutput(true);
 
             DataOutputStream wr = null;
