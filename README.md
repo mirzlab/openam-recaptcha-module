@@ -1,5 +1,7 @@
 # openam-recaptcha-module
 
+![reCAPTCHA](img/recaptcha.png)
+
 This is an authentication module that prompts the user a reCAPTCHA challenge. This module is intended to be used after
 another module (ie. LDAP).
 
@@ -36,7 +38,11 @@ Restart your container.
 
 Configure the Recaptcha module instance with your reCAPTCHA secret key.
 
-Configure an authentication chain with the module LDAP (required) followed by the Recaptcha module (required).
+![Module configuration](img/module.png)
+
+Configure an authentication chain with the module LDAP (or DataStore) followed by the Recaptcha module (both as required).
+
+![Chain configuration](img/chain.png)
 
 ## Let's test
 
@@ -47,4 +53,3 @@ https://openam.example.com:8443/openam/UI/Login?service=Recaptcha
 ```
 
 After entering the username and password, the user will be prompted a reCAPTCHA challenge.
-
