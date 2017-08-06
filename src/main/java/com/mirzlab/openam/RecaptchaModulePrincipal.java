@@ -27,7 +27,7 @@ import java.io.Serializable;
 import java.security.Principal;
 
 /**
- * SampleAuthPrincipal represents the user entity.
+ * RecaptchaModulePrincipal represents the user entity.
  */
 public class RecaptchaModulePrincipal implements Principal, Serializable {
     private final static String COLON = " : ";
@@ -44,9 +44,9 @@ public class RecaptchaModulePrincipal implements Principal, Serializable {
     }
 
     /**
-     * Return the LDAP username for this <code>SampleAuthPrincipal</code>.
+     * Return the LDAP username for this <code>RecaptchaModulePrincipal</code>.
      *
-     * @return the LDAP username for this <code>SampleAuthPrincipal</code>
+     * @return the LDAP username for this <code>RecaptchaModulePrincipal</code>
      */
     @Override
     public String getName() {
@@ -54,7 +54,7 @@ public class RecaptchaModulePrincipal implements Principal, Serializable {
     }
 
     /**
-     * Return a string representation of this <code>SampleAuthPrincipal</code>.
+     * Return a string representation of this <code>RecaptchaModulePrincipal</code>.
      *
      * @return a string representation of this
      *         <code>TestAuthModulePrincipal</code>.
@@ -66,15 +66,15 @@ public class RecaptchaModulePrincipal implements Principal, Serializable {
     }
 
     /**
-     * Compares the specified Object with this <code>SampleAuthPrincipal</code>
+     * Compares the specified Object with this <code>RecaptchaModulePrincipal</code>
      * for equality. Returns true if the given object is also a
-     * <code> SampleAuthPrincipal </code> and the two SampleAuthPrincipal have
+     * <code> RecaptchaModulePrincipal </code> and the two RecaptchaModulePrincipal have
      * the same username.
      *
      * @param o Object to be compared for equality with this
-     *          <code>SampleAuthPrincipal</code>.
+     *          <code>RecaptchaModulePrincipal</code>.
      * @return true if the specified Object is equal equal to this
-     *         <code>SampleAuthPrincipal</code>.
+     *         <code>RecaptchaModulePrincipal</code>.
      */
     @Override
     public boolean equals(Object o) {
@@ -98,9 +98,9 @@ public class RecaptchaModulePrincipal implements Principal, Serializable {
     }
 
     /**
-     * Return a hash code for this <code>SampleAuthPrincipal</code>.
+     * Return a hash code for this <code>RecaptchaModulePrincipal</code>.
      *
-     * @return a hash code for this <code>SampleAuthPrincipal</code>.
+     * @return a hash code for this <code>RecaptchaModulePrincipal</code>.
      */
     @Override
     public int hashCode() {
